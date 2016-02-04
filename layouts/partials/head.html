@@ -11,4 +11,8 @@
 </title>
 <link rel="canonical" href="{{ .Permalink }}">
 {{ partial "head_includes.html" . }}
+{{ if .RSSlink }}
+<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
 </head>

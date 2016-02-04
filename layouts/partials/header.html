@@ -53,11 +53,12 @@
             </a>
         {{ end }}
 
-        {{ if .Site.Params.Email }}
-            <a href="mailto:{{ .Site.Params.Email }}">
-                <i class="icon ion-ios-email larger"></i>
+        {{ if .IsNode }}
+            <a href="{{ .RSSLink }}" type="application/rss+xml" target="_blank">
+                <i class="icon ion-social-rss larger"></i>
             </a>
         {{ end }}
+
         </div>
     </div>
 </section>
